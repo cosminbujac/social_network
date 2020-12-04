@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="480.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controllers.HomepageViewController">
+   <children>
+      <Label fx:id="Greeting" layoutX="37.0" layoutY="53.0" prefHeight="34.0" prefWidth="358.0" text="Have a great day, dud">
+         <font>
+            <Font name="Century" size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="ContinueConversation" layoutX="151.0" layoutY="218.0" mnemonicParsing="false" onAction="#goToConversations" text="Open the chat window!">
+         <font>
+            <Font name="Century" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="LogOff" layoutX="78.0" layoutY="447.0" mnemonicParsing="false" onAction="#logOff" text="Log off">
+         <font>
+            <Font name="Century" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="Quit" layoutX="14.0" layoutY="447.0" mnemonicParsing="false" onAction="#quit" text="Quit">
+         <font>
+            <Font name="Century" size="13.0" />
+         </font>
+      </Button>
+      <TabPane layoutX="444.0" layoutY="6.0" prefHeight="481.0" prefWidth="292.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="FriendsTab" onSelectionChanged="#loadFriends" text="Friends">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="FriendsListView" prefHeight="397.0" prefWidth="292.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Button fx:id="Unfriend" layoutX="110.0" layoutY="412.0" mnemonicParsing="false" onAction="#unfriend" text="Unfriend">
+                           <font>
+                              <Font name="Century" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="FriendshipRequestTab" onSelectionChanged="#loadFriendshipRequests" text="Friendship Requests">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="FriendshipRequestListView" layoutX="28.0" layoutY="48.0" prefHeight="397.0" prefWidth="292.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Button fx:id="AcceptFriendReq" layoutX="68.0" layoutY="413.0" mnemonicParsing="false" onAction="#acceptFriendRequest" text="Accept">
+                           <font>
+                              <Font name="Century" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="163.0" layoutY="413.0" mnemonicParsing="false" onAction="#rejectFriendRequest" text="Reject">
+                           <font>
+                              <Font name="Century" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="AddNewFriend" layoutX="167.0" layoutY="289.0" mnemonicParsing="false" onAction="#addNewFriend" text="Add a new friend!">
+         <font>
+            <Font name="Century" size="13.0" />
+         </font>
+      </Button>
+
+   </children>
+</AnchorPane>

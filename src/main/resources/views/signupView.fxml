@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controllers.SignupViewController">
+   <children>
+      <Label layoutX="98.0" layoutY="36.0" text="Sign up">
+         <font>
+            <Font name="Century" size="29.0" />
+         </font>
+      </Label>
+      <Button fx:id="SignUp" layoutX="124.0" layoutY="254.0" mnemonicParsing="false" onAction="#signUp" text="Sign up">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font></Button>
+      <TextField fx:id="FirstName" layoutX="76.0" layoutY="102.0" promptText="First Name">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="LastName" layoutX="76.0" layoutY="152.0" prefHeight="25.0" prefWidth="156.0" promptText="Last Name">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font></TextField>
+      <PasswordField fx:id="Password" layoutX="76.0" layoutY="207.0" prefHeight="25.0" prefWidth="156.0" promptText="Password" />
+      <Label layoutX="41.0" layoutY="314.0" text="Already a member?">
+         <font>
+            <Font name="Century" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="LogIn" layoutX="203.0" layoutY="311.0" mnemonicParsing="false" onAction="#backToLogin" text="Log in!">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font></Button>
+
+   </children>
+</AnchorPane>

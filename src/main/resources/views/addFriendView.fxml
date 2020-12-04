@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="380.0" prefWidth="547.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controllers.AddFriendViewController">
+   <children>
+      <TabPane prefHeight="385.0" prefWidth="548.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="AddFriendTab" text="Add Friend">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="21.0" layoutY="18.0" prefHeight="352.0" prefWidth="265.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TableView fx:id="addFriendsTable" layoutX="7.0" layoutY="61.0" prefHeight="320.0" prefWidth="275.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="61.0">
+                                <columns>
+                                  <TableColumn fx:id="FirstNameColumn" prefWidth="274.0" text="First Name" />
+                                  <TableColumn fx:id="LastNameColumn" prefWidth="270.0" text="Last Name" />
+                                </columns>
+                                  <placeholder>
+                                      <Label text="No one was found :(" />
+                                  </placeholder>
+                              </TableView>
+                              <TextField fx:id="SearchPerson" alignment="CENTER" layoutX="37.0" layoutY="14.0" onInputMethodTextChanged="#findSomeone" onKeyPressed="#findSomeone" onKeyReleased="#findSomeone" onKeyTyped="#findSomeone" prefHeight="26.0" prefWidth="215.0" promptText="Search someone!">
+                                 <font>
+                                    <Font name="Century" size="13.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="SendFriendRequest" layoutX="316.0" layoutY="14.0" mnemonicParsing="false" onAction="#sendFriendRequest" text="Send a friend request!">
+                                 <font>
+                                    <Font name="Century" size="13.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="SentFriendReqTab" text="See sent friend requests">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="SentFriendReqListview" layoutX="166.0" layoutY="6.0" prefHeight="273.0" prefWidth="547.0" AnchorPane.bottomAnchor="78.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Button fx:id="CancelFriendRequest" layoutX="196.0" layoutY="295.0" mnemonicParsing="false" onAction="#cancelFriendRequest" text="Cancel friend request">
+                           <font>
+                              <Font name="Century" size="13.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

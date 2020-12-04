@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controllers.NewConversationViewController">
+   <children>
+      <ListView fx:id="FriendsList" layoutX="14.0" layoutY="46.0" prefHeight="184.0" prefWidth="258.0" />
+      <ListView fx:id="ParticipantsList" layoutX="328.0" layoutY="46.0" prefHeight="184.0" prefWidth="258.0" />
+      <Label layoutX="118.0" layoutY="14.0" text="Friends">
+         <font>
+            <Font name="Century" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="373.0" layoutY="14.0" text="Conversation participants">
+         <font>
+            <Font name="Century" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="238.0" mnemonicParsing="false" onAction="#addParticipant" text="Add" />
+      <Button layoutX="527.0" layoutY="238.0" mnemonicParsing="false" onAction="#removeParticipant" text="Remove" />
+      <TextField fx:id="ConversationTitle" layoutX="203.0" layoutY="274.0" promptText="Conversation title">
+         <font>
+            <Font name="Century" size="15.0" />
+         </font>
+      </TextField>
+      <Button fx:id="CreateButton" layoutX="223.0" layoutY="331.0" mnemonicParsing="false" onAction="#createConversation" text="Create conversation!">
+         <font>
+            <Font name="Century" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
